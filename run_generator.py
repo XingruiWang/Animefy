@@ -111,7 +111,7 @@ def get_arg_parser():
         '--batch_size',
         help='Batch size for generator. Default: %(default)s',
         type=int,
-        default=1,
+        default=4,
         metavar='VALUE'
     )
 

@@ -34,7 +34,14 @@ def blend_models(model_1, model_2, resolution, level, blend_width=None):
                 y = 1 / (1 + math.exp(exponent))
             else:
                 y = 1 if x > 0 else 0
+<<<<<<< HEAD
 
+=======
+            # if pos - mid <= 0:
+            #     print(mid, pos, "lower")
+            # else:
+            #     print(mid, pos, "hyper")
+>>>>>>> f100ed7d9c5e40603699641b6fdb73c1a8f78d33
             layers.append(k)
             ys.append(y)
         elif k.startswith('G_synthesis.to_data_layers.'):
@@ -56,6 +63,7 @@ def blend_models(model_1, model_2, resolution, level, blend_width=None):
 
 
 
+<<<<<<< HEAD
 def blend_models_2(model_1, model_2, resolution, level, blend_width=None):
     # resolution = f"{resolution}x{resolution}"
     resolutions = [4 * 2 ** i for i in range(7)]
@@ -90,6 +98,9 @@ def blend_models_2(model_1, model_2, resolution, level, blend_width=None):
         out_state[layer] = y * model_2_state_dict[layer] + (1 - y) * model_1_state_dict[layer]
     G_out.load_state_dict(out_state)
     return G_out
+=======
+
+>>>>>>> f100ed7d9c5e40603699641b6fdb73c1a8f78d33
 
     # model_1_conv = extract_conv_names(model_1_state_dict)
     # print(G_1.to_data_layers)
@@ -104,4 +115,11 @@ def main():
 
 
 if __name__ == '__main__':
+    # main()
+    G_out = blend_models("checkpoints/stylegan2_512x512_with_pretrain_fine/1500_2020-12-14_21-45-43/Gs.pth", "checkpoints/stylegan2_512x512_with_pretrain/pretrain/Gs.pth", 128, 3)
+    G_out.save('/home/wxr/stylegan2_pytorch/G_out.pth')
+
+
+if __name__ == '__main__':
     main()
+

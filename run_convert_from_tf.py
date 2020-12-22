@@ -1,3 +1,4 @@
+
 import os
 import re
 import pickle
@@ -273,7 +274,9 @@ def convert_from_tf(tf_state):
             layer.layer.weight.data.copy_(
                 torch.from_numpy(weight).permute((3, 2, 0, 1)).contiguous())
         conv_blocks = D.conv_blocks
+
         for i, size in enumerate(sorted(conv_vars.keys())):
+
             block = conv_blocks[-i - 1]
             if size == 4:
                 assign_weights(
@@ -371,3 +374,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

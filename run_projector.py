@@ -1,5 +1,7 @@
 import os
+
 import warnings
+
 import argparse
 import numpy as np
 import torch
@@ -7,6 +9,7 @@ import torch
 import stylegan2
 from stylegan2 import utils
 
+from torchsummary import summary
 #----------------------------------------------------------------------------
 
 _description = """StyleGAN2 projector.
@@ -165,6 +168,7 @@ def _add_shared_arguments(parser):
         default=True
     )
     parser.add_argument(
+
         '--gpu',
         help='CUDA device indices (given as separate ' + \
             'values if multiple, i.e. "--gpu 0 1"). Default: Use CPU',
@@ -205,6 +209,7 @@ def get_arg_parser():
         '--truncation_psi',
         help='Truncation psi. Default: %(default)s',
         type=float,
+
         default=1,
         metavar='VALUE'
     )
@@ -297,6 +302,7 @@ def project_images(G, images, name_prefix, args):
             image.save(os.path.join(args.output, name_prefix[i + k] + 'target.png'))
         for j in range(args.num_steps):
             proj.step()
+
             if args.save_images:
                 if j in snapshot_steps:           
                     generated = utils.tensor_to_PIL(proj.generate(), pixel_min=args.pixel_min, pixel_max=args.pixel_max)
@@ -413,6 +419,11 @@ def main():
         os.makedirs(args.output)
 
     G = stylegan2.models.load(args.network)
+
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    G = G.to(device)
+    # summary(G,(32,512))
+
     assert isinstance(G, stylegan2.models.Generator), 'Model type has to be ' + \
         'stylegan2.models.Generator. Found {}.'.format(type(G))
 
@@ -423,8 +434,6 @@ def main():
     else:
         raise TypeError('Unkown command {}'.format(args.command))
 
+
 if __name__ == '__main__':
     main()
-
-
-

@@ -764,11 +764,13 @@ def get_models(args):
     )
 
     if args.g_file:
+
         G2 = stylegan2.models.load(args.g_file)
         G1 = stylegan2.models.load('/home/wxr/stylegan2_pytorch_backup/checkpoints/stylegan2_512x512_with_pretrain/pretrain/G.pth')
         G = stylegan2.models.Generator(G_mapping=G1.G_mapping, G_synthesis=G2.G_synthesis)
         for param in G.G_mapping.parameters():
             param.requires_grad = False
+
         assert isinstance(G, stylegan2.models.Generator), \
                 '`--g_file` should specify a generator model, found {}'.format(type(G))
     else:

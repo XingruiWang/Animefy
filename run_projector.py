@@ -1,4 +1,5 @@
 import os
+import warnings
 import argparse
 import numpy as np
 import torch
@@ -149,6 +150,21 @@ def _add_shared_arguments(parser):
     )
 
     parser.add_argument(
+        '--save_images',
+        help='CUDA device indices (given as separate ' + \
+            'values if multiple, i.e. "--gpu 0 1"). Default: Use CPU',
+        type=bool,
+        default=False
+    )
+
+    parser.add_argument(
+        '--save_latents',
+        help='CUDA device indices (given as separate ' + \
+            'values if multiple, i.e. "--gpu 0 1"). Default: Use CPU',
+        type=bool,
+        default=True
+    )
+    parser.add_argument(
         '--gpu',
         help='CUDA device indices (given as separate ' + \
             'values if multiple, i.e. "--gpu 0 1"). Default: Use CPU',
@@ -189,7 +205,7 @@ def get_arg_parser():
         '--truncation_psi',
         help='Truncation psi. Default: %(default)s',
         type=float,
-        default=1.0,
+        default=1,
         metavar='VALUE'
     )
 
@@ -281,13 +297,22 @@ def project_images(G, images, name_prefix, args):
             image.save(os.path.join(args.output, name_prefix[i + k] + 'target.png'))
         for j in range(args.num_steps):
             proj.step()
-            if j in snapshot_steps:
-                generated = utils.tensor_to_PIL(
-                    proj.generate(), pixel_min=args.pixel_min, pixel_max=args.pixel_max)
-                for k, image in enumerate(generated):
-                    image.save(os.path.join(
-                        args.output, name_prefix[i + k] + 'step%04d.png' % (j + 1)))
-
+            if args.save_images:
+                if j in snapshot_steps:           
+                    generated = utils.tensor_to_PIL(proj.generate(), pixel_min=args.pixel_min, pixel_max=args.pixel_max)
+                    for k, image in enumerate(generated):                    
+                            image.save(os.path.join(
+                                args.output, name_prefix[i + k] + 'step%04d.png' % (j + 1)))
+            if args.save_latents:
+                if j in snapshot_steps: 
+                    latents = proj.get_dlatent().cpu().detach().numpy()
+                    for k, latent in enumerate(latents): 
+                            np.save(os.path.join(
+                                args.output, name_prefix[i + k] + 'step%04d.npy' % (j + 1)), latent)
+        latents = proj.get_dlatent().cpu().detach().numpy()
+        for k, latent in enumerate(latents): 
+            np.save(os.path.join(
+                args.output, name_prefix[i + k] + 'step%04d.npy' % (j + 1)), latent)
 #----------------------------------------------------------------------------
 
 def project_generated_images(G, args):
@@ -398,6 +423,8 @@ def main():
     else:
         raise TypeError('Unkown command {}'.format(args.command))
 
-
 if __name__ == '__main__':
     main()
+
+
+

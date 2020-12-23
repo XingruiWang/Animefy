@@ -2,7 +2,7 @@
 
 ### About
 
-The whole project is based on StyleGAN2\[([Official code](https://github.com/NVlabs/stylegan2)\]\[[paper](https://arxiv.org/abs/1912.04958)\]\[[video](https://youtu.be/c-NJtV9Jvp0)\]and layer swapping technique proposed by [Justin Pinkney](https://www.justinpinkney.com/). Thanks for the highly reproduceable Pytorch reimplementing project by [Tetratrio](https://github.com/Tetratrio/stylegan2_pytorch) .
+The whole project is based on StyleGAN2\[([Official code](https://github.com/NVlabs/stylegan2)\]\[[paper](https://arxiv.org/abs/1912.04958)\]\[[video](https://youtu.be/c-NJtV9Jvp0)\]and layer swapping technique proposed by [Justin Pinkney](https://www.justinpinkney.com/). And also thanks for the highly reproduceable Pytorch reimplementing styleGAN2 project by [Tetratrio](https://github.com/Tetratrio/stylegan2_pytorch) .
 
 ### Installation
 

@@ -11,7 +11,7 @@ from stylegan2 import utils
 def synthesis(G_file, latent_file):
     device = torch.device('cpu')
     G = stylegan2.models.load(G_file).G_synthesis 
-    latent = np.load(latent_file)
+    latent = np.load(latent_file, allow_pickle=True)
     G.to(device)
     latent = torch.tensor(latent[np.newaxis, ...]).to(device)
 

@@ -52,15 +52,7 @@ sh run.sh
 
 - Download the pretrain model `G_blend.pth`
 
-- put your own picture in `./projects/real`
-
-- run `resize.py`
-
-```
-cd ./projects
-python resize.py
-cd ..
-```
+- put your own pictures in `./projects/real` （have to be 512x512）
 
 - project your faces to latent layer
 
@@ -69,5 +61,6 @@ sh latent.sh
 ```
 
 - latent feature have been stored in `./projects/latent`
+
 - run `python generate.py`
 

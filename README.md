@@ -1,5 +1,8 @@
 # Generate Your Own Animate Character
 
+<img src="https://raw.githubusercontent.com/XingruiWang/GenerateYourOwnAnimateCharacter/master/example/example.png
+" alt="example" style="width: 100%;" />
+
 ### About
 
 The whole project is based on StyleGAN2\[([Official code](https://github.com/NVlabs/stylegan2)\]\[[paper](https://arxiv.org/abs/1912.04958)\]\[[video](https://youtu.be/c-NJtV9Jvp0)\]and layer swapping technique proposed by [Justin Pinkney](https://www.justinpinkney.com/). And also thanks for the highly reproduceable Pytorch reimplementing styleGAN2 project by [Tetratrio](https://github.com/Tetratrio/stylegan2_pytorch) .

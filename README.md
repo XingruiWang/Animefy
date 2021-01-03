@@ -1,7 +1,6 @@
 # Generate Your Own Animate Character
 
-<img src="https://raw.githubusercontent.com/XingruiWang/GenerateYourOwnAnimateCharacter/master/example/example.png
-" alt="example" style="width: 100%;" />
+<img src="https://raw.githubusercontent.com/XingruiWang/GenerateYourOwnAnimateCharacter/master/example/example.png" alt="example" style="width: 100%;" />
 
 ### About
 

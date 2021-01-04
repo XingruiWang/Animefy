@@ -1,6 +1,6 @@
 # Generate Your Own Animate Character
 
-<img src="https://raw.githubusercontent.com/XingruiWang/GenerateYourOwnAnimateCharacter/master/example/example.png" alt="example" style="width: 100%;" />
+<img src="https://raw.githubusercontent.com/XingruiWang/Animeify/master/example/example.png" alt="example" style="width: 100%;" />
 
 ### About
 
@@ -11,7 +11,7 @@ Just like "toonify", this project is to generate your own animate faces base on 
 - clone the repository by running
 
 ```{shell}
-git clone https://github.com/XingruiWang/GenerateYourOwnAnimateCharacter.git
+git clone https://github.com/XingruiWang/Animeify.git 
 ```
 
 - dependencies

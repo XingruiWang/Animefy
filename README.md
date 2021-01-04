@@ -1,6 +1,6 @@
-# Animeify yourself!
+# Animefy yourself!
 
-<img src="https://raw.githubusercontent.com/XingruiWang/Animeify/master/example/example.png" alt="example" style="width: 100%;" />
+<img src="https://raw.githubusercontent.com/XingruiWang/Animefy/master/example/example.png" alt="example" style="width: 100%;" />
 
 ### About
 
@@ -11,7 +11,7 @@ A "selfie2anime" project based on StyleGAN. You can generate your own animate fa
 - clone the repository by running
 
 ```{shell}
-git clone https://github.com/XingruiWang/Animeify.git 
+git clone https://github.com/XingruiWang/Animefy.git 
 ```
 
 - dependencies

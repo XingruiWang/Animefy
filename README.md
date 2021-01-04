@@ -1,4 +1,4 @@
-# Generate Your Own Animate Character
+# Animeify yourself!
 
 <img src="https://raw.githubusercontent.com/XingruiWang/Animeify/master/example/example.png" alt="example" style="width: 100%;" />
 

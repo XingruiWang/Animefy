@@ -75,10 +75,6 @@ git clone https://github.com/XingruiWang/Animefy.git
 
   We refer to the dependencies of [pixel2style2pixel](https://github.com/eladrich/pixel2style2pixel), all dependencies are provided in `environment/anime.yaml`
 
-### Notebook
-
-The colab notebook is [here](https://colab.research.google.com/github/XingruiWang/Animefy/blob/master/Notebook/Animefy-yourself.ipynb)
-
 ### Train model
 
 - If you want to reproduce the project,  run `run.sh`
@@ -120,4 +116,8 @@ sh latent.sh
 - latent feature have been stored in `./projects/latent`
 
 - run `python generate.py`
+
+### Notebook
+
+The colab notebook is [here](https://colab.research.google.com/github/XingruiWang/Animefy/blob/master/Notebook/Animefy-yourself.ipynb)
 

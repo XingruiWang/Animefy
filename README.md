@@ -59,6 +59,10 @@ Animefy
 
 ```
 
+### Dateset
+
+The animate faces datast we used is [here](http://www.seeprettyface.com/mydataset_page3.html#anime)，this dataset is processed from [DANBOORU2018](https://www.gwern.net/Danbooru2020#danbooru2018). The dataset contains 140000 animate faces.（[Baidu Drive](https://pan.baidu.com/share/init?surl=8pHjzcOWhVF2u6LKOlT3yg)(code：JIMD)）
+
 ### Installation
 
 - clone the repository by running
@@ -73,7 +77,7 @@ git clone https://github.com/XingruiWang/Animefy.git
 
 ### Notebook
 
-We are working on preparing a Colab notebook to present our result.
+The colab notebook is [here](https://colab.research.google.com/github/XingruiWang/Animefy/blob/master/Notebook/Animefy-yourself.ipynb)
 
 ### Train model
 

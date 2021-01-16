@@ -8,56 +8,54 @@ A "selfie2anime" project based on StyleGAN2. You can generate your own animate f
 
 ```bash
 Animefy
-│  align_images.py
-│  blend.py
-│  generate.py
-│  latent.sh
-│  out.png
-│  README.md
-│  requirements.txt
-│  run.sh
-│  run_convert_from_tf.py
-│  run_generator.py
-│  run_metrics.py
-│  run_projector.py
-│  run_training.py
-│  settings.yaml
-│  settings_with_pretrain.yaml
-│  synthesis.sh
+│  README.md -------------------------------- Description of the projects.
+│  latent.sh -------------------------------- The script to find latent feature of a given image.
+│  run.sh ----------------------------------- The script to train the model.
+│  synthesis.sh ----------------------------- The script to generate animate image without condition.
+│  align_images.py -------------------------- Align the face of given images, since the given selfie image might not in the same scale.
+│  blend.py --------------------------------- Blend the model after well trained.
+│  generate.py ------------------------------ Generate animate image based on the latent code.
+│  run_convert_from_tf.py ------------------- Convert pretrained model file in tensorflow to pytorch.
+│  run_generator.py ------------------------- Generate animte images without condition (i.e. latent code), called by `synthesis.sh`.
+│  run_metrics.py --------------------------- Caculate the metric of trained model.
+│  run_projector.py ------------------------- Find latent feature of a given image, called by `latent.sh`.
+│  run_training.py -------------------------- Train the model, called by `run.sh`.
+│  requirements.txt ------------------------- Environment required, can be set up using `pip install -r requirements.txt`.
+│  settings_with_pretrain.yaml -------------- Configuration when training the model.
 │
 ├─environment
 │      anime.yaml
 │
 ├─example
-│      example.png
+│      example.png ------------------------- Example image of the process of finding latent code and generate corresponding anime image by interating.
 │
 ├─Notebook
-│      Animefy-yourself.ipynb
+│      Animefy-yourself.ipynb -------------- Description notebook of the project.
 │
 ├─projects
-│  │  resize.py
+│  │  resize.py ---------------------------- Might be useless now, resize the selfie image to 512 × 512.
 │  │
 │  └─latent
 │          image0000-target.png
 │
-└─stylegan2
-    │  loss_fns.py
-    │  models.py
-    │  modules.py
-    │  project.py
-    │  train.py
-    │  utils.py
-    │  __init__.py
+└─stylegan2 -------------------------------- Core files.
+    │  loss_fns.py ------------------------- Loss function.
+    │  models.py --------------------------- StyleGAN2 model file
+    │  modules.py -------------------------- Dependence module of StyleGAN2.
+    │  project.py -------------------------- Find the latent code.
+    │  train.py ---------------------------- Define class `Trainer` to train the model.
+    │  utils.py ---------------------------- Utility file of model and training.
+    │  __init__.py ------------------------- Using for importing.
     │
     ├─external_models
-    │      inception.py
-    │      lpips.py
+    │      inception.py -------------------- Inception module.
+    │      lpips.py ------------------------ Caculate the similarity between images.
     │      __init__.py
     │
-    └─metrics
-            fid.py
-            ppl.py
-            __init__.py
+    └─metrics ------------------------------ Metric file.
+            fid.py ------------------------- Fréchet Inception Distance。
+            ppl.py ------------------------- Perplexity.
+            __init__.py -------------------- Using for importing.
 
 ```
 

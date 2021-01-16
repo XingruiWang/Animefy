@@ -6,6 +6,60 @@
 
 A "selfie2anime" project based on StyleGAN2. You can generate your own animate faces base on real-world selfie. The whole "selfie2anime" project is based on StyleGAN2\[[Official code](https://github.com/NVlabs/stylegan2)\]\[[paper](https://arxiv.org/abs/1912.04958)\]\[[video](https://youtu.be/c-NJtV9Jvp0)\]and layer swapping technique proposed by [Justin Pinkney](https://www.justinpinkney.com/). And also thanks for the highly reproduceable Pytorch reimplementing styleGAN2 project by [Tetratrio](https://github.com/Tetratrio/stylegan2_pytorch) .
 
+```bash
+Animefy
+│  align_images.py
+│  blend.py
+│  generate.py
+│  latent.sh
+│  out.png
+│  README.md
+│  requirements.txt
+│  run.sh
+│  run_convert_from_tf.py
+│  run_generator.py
+│  run_metrics.py
+│  run_projector.py
+│  run_training.py
+│  settings.yaml
+│  settings_with_pretrain.yaml
+│  synthesis.sh
+│
+├─environment
+│      anime.yaml
+│
+├─example
+│      example.png
+│
+├─Notebook
+│      Animefy-yourself.ipynb
+│
+├─projects
+│  │  resize.py
+│  │
+│  └─latent
+│          image0000-target.png
+│
+└─stylegan2
+    │  loss_fns.py
+    │  models.py
+    │  modules.py
+    │  project.py
+    │  train.py
+    │  utils.py
+    │  __init__.py
+    │
+    ├─external_models
+    │      inception.py
+    │      lpips.py
+    │      __init__.py
+    │
+    └─metrics
+            fid.py
+            ppl.py
+            __init__.py
+
+```
 
 ### Installation
 

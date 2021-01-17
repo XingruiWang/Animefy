@@ -93,6 +93,10 @@ sh run.sh
 
 - The trained model is not enough to generate custom animate faces. Intrigued by  [Justin Pinkney](https://www.justinpinkney.com/), we blended the human faces generating model and our animate faces generating model in order to keep the low resolution information of real world human face (gesture, head position and angle) and high resolution information (big eyes, small nose, hair style and etc. ) of animate faces. 
 
+- I reimplement the [blend_models.py](https://github.com/justinpinkney/stylegan2/blob/master/blend_models.py) by pytorch ([here](https://github.com/XingruiWang/Animefy/blob/master/blend.py))
+
+- 
+
 ### Pretrained model
 
 | Name     |  Description    |

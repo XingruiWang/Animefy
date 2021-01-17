@@ -98,7 +98,7 @@ sh run.sh
 | Name     |  Description    |
 | ---- | ---- |
 |  [StyleGAN2 on FFHQ dataset (config-f 512x512)](https://github.com/justinpinkney/awesome-pretrained-stylegan2#faces-FFHQ-config-f-512x512)    | The pretrain model trained on FFHQ human dataset to generate human faces. |
-| [StyleGAN2 on animate characters]() | Our final result to generate animate faces and also to project real-world human faces, namely `G_out.pth`. |
+| [StyleGAN2 on animate characters](https://drive.google.com/uc?id=19vr5taIJSbNMiqihW1-vWSZkXUK7tdPR) | Our final result to generate animate faces and also to project real-world human faces, namely `G_out.pth`. |
 | [StyleGAN2 on animate characters(blended)]() | Our final result to generate animate faces and also to project real-world human faces, namely `G_blend.pth`. |
 
 ### Custom your own Animate Character

@@ -103,6 +103,10 @@ sh run.sh
 
 ### Custom your own Animate Character
 
+You can generate your own character on the colab Notebook [here](https://colab.research.google.com/github/XingruiWang/Animefy/blob/master/Notebook/Animefy-yourself.ipynb) (Recommanded)
+
+Or by runing: 
+
 - Download the pretrain model `G_blend.pth`
 
 - put your own pictures in `./projects/real` （have to be 512x512）
@@ -117,7 +121,4 @@ sh latent.sh
 
 - run `python generate.py`
 
-### Notebook
-
-The colab notebook is [here](https://colab.research.google.com/github/XingruiWang/Animefy/blob/master/Notebook/Animefy-yourself.ipynb)
 

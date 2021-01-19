@@ -87,7 +87,7 @@ sh run.sh
 
 - We trained our model on 4 GPUs and obtained an acceptable result after 2000 iterations (3-4 hours). Our final model was trained for 18000 iterations (around 2 days).
 - If you want to transfer the project to other dataset, like project human faces to cat faces, we recommend you to keep the pretrain model as StyleGAN2 FFHQ pretrain model and finetuning on your custom dataset (by change `data_dir`).
-- Since our propose is to project human face to anime character, we freeze the `G_mapping` layer after loading pretrain model to keep the ability of model to extract the human faces features. If you just want to generate high quality image, you don't need to do that (set `param.requires_grad = True` in line 767 of `run_training.py`).
+- Since our proposal is to project human face to anime character, we **freeze** the `G_mapping` layer after loading pretrain model, to keep the ability of model of extracting the human faces features. If you just want to generate high quality animate image, you don't need to do that (set `param.requires_grad = True` in line 767 of `run_training.py`).
 
 ### Model blending
 

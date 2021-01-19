@@ -114,7 +114,7 @@ G_out.save('G_blend.pth')
 
 ### Custom your own Animate Character
 
-**You can generate your own character on the colab Notebook [here](https://colab.research.google.com/github/XingruiWang/Animefy/blob/master/Notebook/Animefy-yourself.ipynb) (Recommanded)**
+:point_right: **You can generate your own character on the colab Notebook [here](https://colab.research.google.com/github/XingruiWang/Animefy/blob/master/Notebook/Animefy-yourself.ipynb) (Recommanded)**
 
 Or by runing: 
 

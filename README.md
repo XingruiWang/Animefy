@@ -95,7 +95,7 @@ sh run.sh
 
 - I reimplement the [blend_models.py](https://github.com/justinpinkney/stylegan2/blob/master/blend_models.py) by pytorch ([here](https://github.com/XingruiWang/Animefy/blob/master/blend.py))
 
-```
+```python
 from blend import blend_models
 
 G_out = blend_models("G_pretrain.pth", 
@@ -124,7 +124,7 @@ Or runing:
 
 - project your faces to latent layer
 
-```
+```bash
 sh latent.sh
 ```
 

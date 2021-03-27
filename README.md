@@ -116,7 +116,7 @@ G_out.save('G_blend.pth')
 
 :point_right: **You can generate your own character on the colab Notebook [here](https://colab.research.google.com/github/XingruiWang/Animefy/blob/master/Notebook/Animefy-yourself-new.ipynb) (Recommanded)**
 
-Or running **in terminal**: 
+Or running in **terminal**: 
 
 - Download the pretrain model `G_blend.pth`
 

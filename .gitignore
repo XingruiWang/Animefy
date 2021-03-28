@@ -1,0 +1,7 @@
+checkpoint/*
+runs
+train_output
+out_real
+pretrained
+projects/*
+G_out.pth

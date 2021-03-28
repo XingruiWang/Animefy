@@ -100,7 +100,7 @@ def blend_models_2(model_1, model_2, resolution, level, blend_width=None):
 
 
 def main(): 
-    G_out = blend_models("checkpoints/stylegan2_512x512_with_pretrain/pretrain/Gs.pth", "/home/wxr/stylegan2_pytorch_backup/checkpoints/stylegan2_512x512_with_pretrain_new_2/18500_2020-12-22_23-05-35/Gs.pth", 8, None)
+    G_out = blend_models("checkpoints/stylegan2_512x512_with_pretrain/pretrain/Gs.pth", "/home/wxr/stylegan2_pytorch_backup/checkpoints/stylegan2_512x512_with_pretrain_new_2/20000_2020-12-23_13-17-51/Gs.pth", 32, None)
     # G_out = blend_models( "checkpoints/stylegan2_512x512_with_pretrain_new_2/10000_2020-12-22_03-42-54/Gs.pth","checkpoints/stylegan2_512x512_with_pretrain/pretrain/Gs.pth", 256, None)
     G_out.save('G_out.pth')
 

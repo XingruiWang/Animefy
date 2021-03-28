@@ -6,7 +6,8 @@ checkpoint_dir: 'checkpoints/stylegan2_512x512_with_pretrain_new_2'
 checkpoint_interval: 500
 data_dir: /DATA2/wxr/anime_face
 output_dir: train_output
-gpu: [3,2]
-g_file: /home/wxr/stylegan2_pytorch_backup/checkpoints/stylegan2_512x512_with_pretrain_new_2/10000_2020-12-22_03-42-54/G.pth
-d_file: /home/wxr/stylegan2_pytorch_backup/checkpoints/stylegan2_512x512_with_pretrain_new_2/10000_2020-12-22_03-42-54/D.pth
+gpu: [2]
+g_file: /home/wxr/stylegan2_pytorch_backup/checkpoints/stylegan2_512x512_with_pretrain_new_2/29000_2021-01-20_01-02-12/G.pth
+d_file: /home/wxr/stylegan2_pytorch_backup/checkpoints/stylegan2_512x512_with_pretrain_new_2/29000_2021-01-20_01-02-12/D.pth
 iterations: 10000
+batch_size: 4

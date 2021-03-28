@@ -1,10 +1,11 @@
 # Here is an example training config file for 512x512 images.
 channels: [32, 64, 128, 256, 512, 512, 512, 512]
 tensorboard_log_dir: 'runs/stylegan2_512x512'
-tensorboard_image_interval: 100
+tensorboard_image_interval: 20
 checkpoint_dir: 'checkpoints/stylegan2_512x512'
-checkpoint_interval: 1000
-data_dir: /DATA2/wxr/anime_face_test
-output: /DATA2/train_output
-gpu: [0, 1, 2, 3]
-iterations: 100000
+checkpoint_interval: 500
+data_dir: data/anime_face
+output_dir: train_output
+gpu: [0,]
+g_file: G_pretrain.pth
+iterations: 5

@@ -764,10 +764,12 @@ def get_models(args):
     )
 
     if args.g_file:
-
-        G2 = stylegan2.models.load(args.g_file)
-        G1 = stylegan2.models.load('/home/wxr/stylegan2_pytorch_backup/checkpoints/stylegan2_512x512_with_pretrain/pretrain/G.pth')
-        G = stylegan2.models.Generator(G_mapping=G1.G_mapping, G_synthesis=G2.G_synthesis)
+        # be sure the G_mapping is from FFHQ dataset pretrain and freeze it.
+        # if not, run      
+        # G1 = stylegan2.models.load('G_pretrain.pth')
+        # G2 = stylegan2.models.load(args.g_file)
+        # G = stylegan2.models.Generator(G_mapping=G1.G_mapping, G_synthesis=G2.G_synthesis)
+        G = stylegan2.models.load(args.g_file)
         for param in G.G_mapping.parameters():
             param.requires_grad = False
 

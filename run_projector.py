@@ -154,16 +154,14 @@ def _add_shared_arguments(parser):
 
     parser.add_argument(
         '--save_images',
-        help='CUDA device indices (given as separate ' + \
-            'values if multiple, i.e. "--gpu 0 1"). Default: Use CPU',
+        help='to save images output or not',
         type=bool,
         default=False
     )
 
     parser.add_argument(
         '--save_latents',
-        help='CUDA device indices (given as separate ' + \
-            'values if multiple, i.e. "--gpu 0 1"). Default: Use CPU',
+        help='save latent vectors output or not',
         type=bool,
         default=True
     )

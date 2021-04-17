@@ -1,3 +1,4 @@
+# model blending technique
 import cv2 as cv
 import torch
 import stylegan2

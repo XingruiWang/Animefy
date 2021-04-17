@@ -112,6 +112,7 @@ G_out.save('G_blend.pth')
 | [StyleGAN2 on animate characters](https://drive.google.com/file/d/1J6sJaRZJg4dAoSw03fyanWV2oEscOeSk/view?usp=sharing) | Our final result to generate animate faces and also to project real-world human faces, namely `G_out.pth`. |
 | [StyleGAN2 on animate characters(blended)](https://drive.google.com/file/d/1kzjSchNGZ1b9Q_eX0fCZ1ACd2NgS-SS6/view?usp=sharing) | Our final result to generate animate faces and also to project real-world human faces, namely `G_blend.pth`. |
 
+
 ### Custom your own Animate Character
 
 :point_right: **You can generate your own character on the colab Notebook [here](https://colab.research.google.com/github/XingruiWang/Animefy/blob/master/Notebook/Animefy-yourself-new.ipynb) (Recommanded)**

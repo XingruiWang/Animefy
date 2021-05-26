@@ -1,6 +1,6 @@
 # Animefy yourself!
 
-🙃 I realize that maybe the model needs to be trained for longer time, I will update this when I get time later ...
+🙃 I am not sure if the model needs to be trained for longer time, I will update this when I get time later ...
 
 <img src="https://raw.githubusercontent.com/XingruiWang/Animefy/master/example/example.png" alt="example" style="width: 100%;" />
 

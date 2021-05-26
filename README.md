@@ -1,5 +1,7 @@
 # Animefy yourself!
 
+🙃 I realize that maybe the model needs to train for longer time, maybe I will update this when I got time ...
+
 <img src="https://raw.githubusercontent.com/XingruiWang/Animefy/master/example/example.png" alt="example" style="width: 100%;" />
 
 ### About
